@@ -1,5 +1,6 @@
 import click
-from noteman.notes import create_note,list_all,get_note
+from noteman.notes import create_note
+from noteman.gather import list_all,get_note
 from noteman.remove import remove_note
 
 @click.group()

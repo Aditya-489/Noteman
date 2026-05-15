@@ -1,7 +1,10 @@
 
-from noteman.db import get_db_connection
+from db import get_db_connection
+from fastapi import APIRouter
 
+router=APIRouter(prefix="/create")
 
+@router.post("/")
 def create_note(title:str ,content :str) -> None:
         conn=get_db_connection()
         if conn is None:

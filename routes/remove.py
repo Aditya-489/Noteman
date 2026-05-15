@@ -1,5 +1,8 @@
-from noteman.db import get_db_connection
+from db import get_db_connection
+from fastapi import APIRouter
+router =APIRouter(prefix="/remove")
 
+@router.delete("/")
 def remove_note(note_id:int=None,note_title:str=None) -> None:
     conn=get_db_connection()
     cur=conn.cursor()

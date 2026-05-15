@@ -7,7 +7,9 @@ requires-python = ">=3.12"
 dependencies = [
     "click>=8.3.3",
     "dotenv>=0.9.9",
+    "fastapi[standard]>=0.136.1",
     "psycopg>=3.3.4",
+    "uvicorn>=0.47.0",
 ]
 [project.scripts]
 noteman ="noteman.cli:cli"
