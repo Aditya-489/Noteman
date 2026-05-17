@@ -5,11 +5,11 @@ def remove_note(note_id:int=None,note_title:str=None) -> None:
     cur=conn.cursor()
     try:
         if note_id is not None:
-            cur.execute("delete from notes where id=%s",(note_id,))
+            cur.execute("delete from notes where id=?",(note_id,))
             conn.commit()
             print("removed note ",note_id)
         elif note_title is not None:
-            cur.execute("delete from notes where title=%s",(note_title,))
+            cur.execute("delete from notes where title=?",(note_title,))
             conn.commit()
             print("removed note ",note_title)
         else:

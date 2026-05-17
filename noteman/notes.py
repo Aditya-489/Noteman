@@ -8,7 +8,7 @@ def create_note(title:str ,content :str) -> None:
                 print("Failed to connect to DB")
                 return
         cur =conn.cursor()
-        cur.execute("INSERT INTO NOTES (title,value) VALUES(%s,%s)",(title,content))
+        cur.execute("INSERT INTO NOTES (title,content) VALUES(?,?)",(title,content))
         conn.commit()
 
 

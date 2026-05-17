@@ -1,11 +1,12 @@
 import click
+from noteman.db import init_db
 from noteman.notes import create_note
 from noteman.gather import list_all,get_note
 from noteman.remove import remove_note
 
 @click.group()
 def cli():
-    pass
+    init_db()
 
 
 @click.command()

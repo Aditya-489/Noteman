@@ -1,5 +1,5 @@
 
-from db import get_db_connection
+from apidb import get_db_connection
 from fastapi import APIRouter
 
 router=APIRouter(prefix="/create")

@@ -1,6 +1,5 @@
 import psycopg as psy
 from dotenv import load_dotenv
-import os
 load_dotenv()
 
 def get_db_connection():
@@ -9,8 +8,8 @@ def get_db_connection():
             host="localhost",
             port=5432,
             dbname="notes",
-            user="YOUR_USERNAME",
-            password="YOUR_PASSWORD"
+            user="aditya",
+            password="aditya@13"
         )
     except Exception as e:
         print(f"Error connecting to the database: {e}")
