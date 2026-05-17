@@ -8,8 +8,8 @@ def get_db_connection():
             host="localhost",
             port=5432,
             dbname="notes",
-            user="aditya",
-            password="aditya@13"
+            user="username",
+            password="password"
         )
     except Exception as e:
         print(f"Error connecting to the database: {e}")
